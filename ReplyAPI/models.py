@@ -23,3 +23,4 @@ class User(AbstractUser):
 class Payment(models.Model):
     credit_card = models.CharField(max_length=16, blank=True, null=True, validators=[RegexValidator(r'^\d{16}$', 'Must be 16 digits.')])
     amount = models.CharField(max_length=3, blank=False, null=False, validators=[RegexValidator(r'^\d{3}$', 'Must be 3 digits.')])
+    
