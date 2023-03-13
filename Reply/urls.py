@@ -15,7 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from ReplyAPI import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', views.home, name = 'home'),
+    path('login/', views.login, name = 'login'),
+    path('register/', views.register, name='register'),
+    path('payment/', views.payment, name='payment'),
+     path('credit_card/', views.credit_card , name='credit_card'),
 ]

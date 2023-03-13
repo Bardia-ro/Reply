@@ -1,0 +1,19 @@
+<h1>Credit Cards</h1>
+
+<h2>Users with Credit Cards</h2>
+<ul>
+{% for user in users_with_credit_cards %}
+    <li>{{ user.username }} - {{ user.credit_card }}</li>
+{% empty %}
+    <li>No users with credit cards found.</li>
+{% endfor %}
+</ul>
+
+<h2>Users without Credit Cards</h2>
+<ul>
+{% for user in users_without_credit_cards %}
+    <li>{{ user.username }} - No credit card on file.</li>
+{% empty %}
+
+{% endfor %}
+</ul>
